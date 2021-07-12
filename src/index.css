@@ -5,9 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+/* Grid_Container */
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 3rem;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  min-height: 100vh;
+  margin: 10px;
+}
+header{
+  background: #85ee5c;  
+  grid-area: header;
+  border-radius: 0.5rem;
+}
+header img{
+  width: 1.5rem;
+  height:1.5rem;
+}
+header h1{
+  color: aliceblue;
+}
+footer{
+  color: black;
+  background: #85ee5c;
+  grid-area: footer;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+main{
+  grid-area: main;
 }
